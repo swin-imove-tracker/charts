@@ -41,6 +41,7 @@ spec:
             - secretRef:
                 name: {{ .Values.externalSecretRef.name }}
           livenessProbe:
+            periodSeconds: 60
             httpGet:
               path: /ping
               port: http
