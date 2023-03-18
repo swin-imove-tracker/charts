@@ -1,0 +1,12 @@
+# Helm chart files
+**/charts/*.tgz
+
+# Helm chart temporary files
+**/tmpcharts
+
+# MacOS metadata files
+.DS_Store
+
+# Logs and cache
+logs/
+.cache/
