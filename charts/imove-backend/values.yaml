@@ -11,7 +11,7 @@ image:
   tag: ""
 
 externalSecretRef:
-  name: imove-backend-secrets
+  name: ""
 
 imagePullSecrets: []
 nameOverride: ""
