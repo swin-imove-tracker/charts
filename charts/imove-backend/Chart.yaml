@@ -4,4 +4,4 @@ description: iMOVE Backend API
 
 type: application
 version: 0.0.9
-appVersion: "0.0.4"
+appVersion: "0.0.5"
