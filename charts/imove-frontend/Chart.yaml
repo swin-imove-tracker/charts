@@ -3,5 +3,5 @@ name: imove-frontend
 description: iMOVE Frontend Application
 
 type: application
-version: 0.0.16
-appVersion: "0.0.10"
+version: 0.0.17
+appVersion: "0.0.11"
