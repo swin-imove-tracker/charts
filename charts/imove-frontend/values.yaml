@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+podLabels: {}
+
 image:
   repository: ghcr.io/swin-imove-tracker/frontend
   pullPolicy: Always
