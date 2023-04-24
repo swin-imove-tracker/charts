@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: imove-consumer
-  {{- with .Values.consumer.annotations -}}
+  {{- with .Values.consumer.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}

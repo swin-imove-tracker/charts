@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: imove-api
-  {{- with .Values.api.annotations -}}
+  {{- with .Values.api.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
