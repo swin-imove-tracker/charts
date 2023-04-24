@@ -37,8 +37,11 @@ api:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 80
 
+  annotations: {}
+
 consumer:
   enabled: true
+  annotation: {}
   image:
     repository: ghcr.io/swin-imove-tracker/backend
     pullPolicy: Always

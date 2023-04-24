@@ -3,8 +3,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: imove-consumer
+  {{- with .Values.consumer.annotations -}}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   labels:
-    app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+    {{- include "baseLabels" . | nindent 4 }}
 spec:
   strategy:
     type: Recreate
