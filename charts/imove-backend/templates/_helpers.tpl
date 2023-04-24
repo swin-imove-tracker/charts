@@ -1,62 +1,14 @@
-{{/*
-Expand the name of the chart.
-*/}}
-{{- define "imove-backend.name" -}}
-{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
+{{- define "api.selectorLabels" -}}
+app.kubernetes.io/name: imove-api
+app.kubernetes.io/instance: imove-api
 {{- end }}
 
-{{/*
-Create a default fully qualified app name.
-We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
-If release name contains chart name it will be used as a full name.
-*/}}
-{{- define "imove-backend.fullname" -}}
-{{- if .Values.fullnameOverride }}
-{{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
-{{- else }}
-{{- $name := default .Chart.Name .Values.nameOverride }}
-{{- if contains $name .Release.Name }}
-{{- .Release.Name | trunc 63 | trimSuffix "-" }}
-{{- else }}
-{{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" }}
-{{- end }}
-{{- end }}
+{{- define "consumer.selectorLabels" -}}
+app.kubernetes.io/name: imove-consumer
+app.kubernetes.io/instance: imove-consumer
 {{- end }}
 
-{{/*
-Create chart name and version as used by the chart label.
-*/}}
-{{- define "imove-backend.chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
-{{- end }}
-
-{{/*
-Common labels
-*/}}
-{{- define "imove-backend.labels" -}}
-helm.sh/chart: {{ include "imove-backend.chart" . }}
-{{ include "imove-backend.selectorLabels" . }}
-{{- if .Chart.AppVersion }}
+{{- define "baseLabels" -}}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end }}
-
-{{/*
-Selector labels
-*/}}
-{{- define "imove-backend.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "imove-backend.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
-{{- end }}
-
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "imove-backend.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "imove-backend.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
 {{- end }}

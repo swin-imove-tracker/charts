@@ -1,0 +1,32 @@
+{{- if .Values.consumer.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imove-consumer
+  labels:
+    app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "consumer.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "consumer.selectorLabels" . | nindent 8 }}
+        {{- with .Values.consumer.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      containers:
+        - name: imove-consumer
+          image: "{{ .Values.consumer.image.repository }}:consumer-{{ .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.consumer.image.pullPolicy }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.consumer.externalSecretRef.name }}
+          resources:
+            {{- toYaml .Values.consumer.resources | nindent 12 }}
+{{- end }}
