@@ -18,6 +18,10 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
+        admission.datadoghq.com/enabled: "true"
+        tags.datadoghq.com/env: "{{ .Values.env }}"
+        tags.datadoghq.com/service: "imove-frontend"
+        tags.datadoghq.com/version: "{{ .Chart.AppVersion }}"
         {{- include "imove-frontend.selectorLabels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
