@@ -19,6 +19,10 @@ spec:
   template:
     metadata:
       labels:
+        admission.datadoghq.com/enabled: "true"
+        tags.datadoghq.com/env: "{{ .Values.env }}"
+        tags.datadoghq.com/service: "imove-consumer"
+        tags.datadoghq.com/version: "{{ .Chart.AppVersion }}"
         {{- include "consumer.selectorLabels" . | nindent 8 }}
         {{- with .Values.consumer.podLabels }}
         {{- toYaml . | nindent 8 }}
