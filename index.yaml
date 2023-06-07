@@ -453,6 +453,16 @@ entries:
     version: 0.0.3
   imove-frontend:
   - apiVersion: v2
+    appVersion: 0.0.15
+    created: "2023-06-07T03:03:32.157056122Z"
+    description: iMOVE Frontend Application
+    digest: 92e4e1caaecce13b6e85965d3d5307a6c54dd8305b1b37fbf7156f81ac24f28a
+    name: imove-frontend
+    type: application
+    urls:
+    - https://github.com/swin-imove-tracker/charts/releases/download/imove-frontend-0.0.22/imove-frontend-0.0.22.tgz
+    version: 0.0.22
+  - apiVersion: v2
     appVersion: 0.0.14
     created: "2023-05-17T09:02:52.029197439Z"
     description: iMOVE Frontend Application
@@ -652,4 +662,4 @@ entries:
     urls:
     - https://github.com/swin-imove-tracker/charts/releases/download/imove-frontend-0.0.2/imove-frontend-0.0.2.tgz
     version: 0.0.2
-generated: "2023-06-07T01:56:54.18183163Z"
+generated: "2023-06-07T03:03:32.157234821Z"
