@@ -454,6 +454,16 @@ entries:
   imove-docs:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2023-06-09T01:36:47.818997167Z"
+    description: Documentation for the iMOVE Tracker Project
+    digest: 5e6fad629bfb799d74ea3972bf9470549e8309af4d92aff097bec87bc61f2d2d
+    name: imove-docs
+    type: application
+    urls:
+    - https://github.com/swin-imove-tracker/charts/releases/download/imove-docs-0.0.2/imove-docs-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2023-06-09T01:33:07.678047279Z"
     description: Documentation for the iMOVE Tracker Project
     digest: 0962573b525fe524dde8f4f032043e0834aff1b41fb3d95ed23281d278eed746
@@ -673,4 +683,4 @@ entries:
     urls:
     - https://github.com/swin-imove-tracker/charts/releases/download/imove-frontend-0.0.2/imove-frontend-0.0.2.tgz
     version: 0.0.2
-generated: "2023-06-09T01:33:07.678294277Z"
+generated: "2023-06-09T01:36:47.819140268Z"
