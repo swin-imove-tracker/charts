@@ -3,5 +3,5 @@ name: imove-backend
 description: iMOVE Backend API
 
 type: application
-version: 0.4.3
-appVersion: "0.4.3"
+version: 0.4.5
+appVersion: "0.4.5"
