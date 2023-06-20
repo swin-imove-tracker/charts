@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   imove-backend:
   - apiVersion: v2
+    appVersion: 0.4.6
+    created: "2023-06-20T11:17:40.951408707Z"
+    description: iMOVE Backend API
+    digest: 9fa38060c642d78bb8b1982072ff892421c6a66c801f1e22a053040e1268b691
+    name: imove-backend
+    type: application
+    urls:
+    - https://github.com/swin-imove-tracker/charts/releases/download/imove-backend-0.4.6/imove-backend-0.4.6.tgz
+    version: 0.4.6
+  - apiVersion: v2
     appVersion: 0.4.5
     created: "2023-06-16T04:03:45.523240344Z"
     description: iMOVE Backend API
@@ -773,4 +783,4 @@ entries:
     urls:
     - https://github.com/swin-imove-tracker/charts/releases/download/imove-frontend-0.0.2/imove-frontend-0.0.2.tgz
     version: 0.0.2
-generated: "2023-06-19T12:16:53.777318624Z"
+generated: "2023-06-20T11:17:40.952705738Z"
