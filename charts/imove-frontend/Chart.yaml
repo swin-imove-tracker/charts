@@ -3,5 +3,5 @@ name: imove-frontend
 description: iMOVE Frontend Application
 
 type: application
-version: 0.0.29
-appVersion: "auspost-5"
+version: 0.0.30
+appVersion: "auspost-6"
