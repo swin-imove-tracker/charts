@@ -3,5 +3,5 @@ name: imove-docs
 description: Documentation for the iMOVE Tracker Project
 
 type: application
-version: 0.0.4
-appVersion: "0.0.3"
+version: 0.0.5
+appVersion: "0.0.4"
